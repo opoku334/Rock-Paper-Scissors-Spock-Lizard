@@ -1,0 +1,421 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: radial-gradient( hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+    
+}
+.container{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header{
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    border: 1px solid hsl(217, 16%, 45%);
+    justify-content: space-between;
+    text-align: center;
+    
+}
+.header a{
+    cursor: pointer;
+    padding: 10px;
+}
+.header img{
+    width: 100px;
+    padding-left: 10px;
+}
+.scores_board{
+    background-color: white;
+    margin:10px 10px;
+    padding: 0px 20px;
+    border-radius: 7px;
+}
+.scores_board p{
+    font-size: 13px;
+    color:hsl(229, 64%, 46%);
+    margin: 0;
+    padding-top: 4px;
+    font-weight: bold;
+}
+.scores_board h1{
+    margin: 0;
+    font-size: 55px;
+}
+
+
+.game_board{
+    margin-top: 100px;
+    background-repeat: no-repeat;
+    height: 400px;
+    position: relative;
+    background-position: center;
+    
+
+}
+.bonus_game{
+    background-image: url(images/bg-pentagon.svg);
+}
+.main_game{
+    background-image: url(images/bg-triangle.svg);
+    height: 350px;
+}
+
+.images{
+    width: 45px;
+    height: 45px;
+}
+
+.scissors,.rock,.paper,.spock,.lizard{
+    position: absolute;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    box-shadow: inset -3px -3px 20px rgba(255,255,255),inset 3px 3px 7px rgba(0,0,0);
+    cursor: pointer; 
+    background-color: white;
+    
+}
+
+
+.options_button{
+    background-color: white;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    box-shadow: inset -3px -3px 20px rgba(255,255,255),inset 3px 3px 7px rgba(0,0,0);
+    cursor: pointer; 
+    
+}
+.scissors{
+    right: 35%;
+ 
+    
+
+    border: 13px solid  hsl(39, 89%, 49%);
+}
+.paper{
+    right: 0;
+    top:25%;
+    
+    border: 13px solid hsl(230, 89%, 62%);
+    
+}
+.rock{
+    right:8%;
+    bottom:0;
+    border: 13px solid  hsl(349, 71%, 52%);
+    
+    
+    
+}
+.lizard{
+    bottom:0;
+    border: 13px solid hsl(261, 73%, 60%) ;
+    left: 8%;
+    
+}
+.spock{
+
+    top:25%;
+    border: 13px solid hsl(189, 59%, 53%);
+    
+}
+.main_game .options_button{
+    width: 130px;
+    height: 130px;
+}
+.main_game  .scissors{
+    right: 0;
+}
+.main_game .paper{
+    left: 0;
+    top:0;
+}
+.main_game .rock{
+    bottom: 0;
+    left: 30%;
+}
+
+
+.modal_button_style{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+.modal_button_style button{
+    padding: 10px 40px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid hsl(217, 16%, 45%);
+}
+.modal{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    background-color: white;
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100vh;
+}
+.modal button{
+    background-color: transparent;
+    border: none;
+    margin-bottom: 3rem;
+}
+.modal h1{
+    margin-top: 5rem;
+}
+.visible{
+    display: none !important;
+}
+.button_display_small_none{
+    display: none;
+}
+
+
+
+
+
+
+.naana{
+
+    background-color:rgba(0,0,0,0.2);
+
+    box-shadow: none;
+    border: none;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    
+    
+ 
+  
+
+}
+
+.attribution{
+    margin-top: 2rem;
+}
+
+
+.attribution a{
+    text-decoration: none;
+    background-color:white;
+    
+}
+
+
+.winners_section{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    height: 530px;
+    
+
+    
+}
+.results_container{
+    
+    display: flex;
+    justify-content:space-around;
+    width: 700px;
+    position: relative;
+    
+    
+    
+}
+.results_container .rock,.results_container .paper,.results_container .spock,.results_container .lizard, .results_container .scissors{
+   position: static;
+   
+
+  
+    /* box-shadow: inset -3px -3px 20px rgba(255,255,255),inset 3px 3px 7px rgba(0,0,0); */
+
+    
+}
+.results_container h4{
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+  
+    text-align: center;
+
+}
+
+
+
+.circles{
+    position:absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 70%;  
+
+}
+
+.your_pick .circles{
+    right: 52%;
+}
+
+.computer_pick .circles{
+    left: 35%;
+}
+.circle1,.circle2,.circle3,.circle4{
+    animation: ripple 3s infinite ease-out;
+    background-color:rgba(255,255,255,0.6);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    
+}
+.circle1{
+    animation-delay: 1s;
+}
+.circle2{
+    animation-delay: 2s;
+}
+.circle3{
+    animation-delay: 3s;
+}
+.circle4{
+    animation-delay: 4s;
+}
+
+@keyframes ripple {
+    0% {
+        opacity: 1;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1);
+    }
+    
+}
+.restart_button{
+    padding-top: 30px;
+}
+.restart{
+    padding:10px 20px;
+    border-radius: 10px;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+.restart:hover{
+    color: red;
+}
+
+.display{
+    color:white;
+    text-align: center;
+    font-size:1.5rem;
+    font-weight: bolder;
+}
+.final_display{
+    display: none;
+}
+.final_display_mobile{
+    position: absolute;
+    top:50%
+}
+
+
+
+
+
+@media screen  and (min-width:768px){
+
+    .container{
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        
+        
+    }
+    .header{
+        width: 500px;
+        border-radius: 20px;
+        padding: 10px;
+    }
+    .game_board{
+        width: 400px;
+    }
+    .modal_button_style{
+        justify-content: end;
+    }
+    .modal_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .modal{
+        width: auto;
+        height: auto;
+        margin-top: 15rem;
+        gap:0;
+        
+    }
+
+    .modal h1{
+        margin-top: 0;
+    }
+    .modal img{
+        width: 80%;
+        
+    }
+    .rules_header{
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        padding-top: 10px;
+    
+        
+    }
+    .modal_image{
+        padding-bottom: 10px;
+    }
+    .button_display_small_none{
+        display: block;
+    }
+    .button_display_large_none{
+        display: none;
+    }
+
+   
+    .your_pick .circles{
+        right: 71%;
+    }
+    .computer_pick .circles{
+        left:62%;
+    }
+
+    .final_display{
+        display: block;
+    }
+    .final_display_mobile{
+        display: none;
+    }
+ 
+
+ 
+
+    
+}

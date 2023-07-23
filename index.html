@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+
+  <section class="container">
+    <div class="header">
+        <a type="button"class="game_changer main"><img src="images/logo.svg" alt=""></a>
+        <a type="button" class="game_changer visible bonus"><img src="images/logo-bonus.svg" alt=""></a>
+    
+        <div class="scores_board">
+            <p>SCORE</p>
+            <h1 id="scores">0</h1>
+        </div>
+
+    </div>
+    
+
+
+</section>
+
+
+<div class="container all_games">
+    
+    <section class="game_board bonus_game visible">
+
+        <button class="paper options_button" value=1><img src="images/icon-paper.svg" alt=""class='images'></button>
+        <button class="scissors options_button" value=0><img src="images/icon-scissors.svg" alt="" class="images"></button>
+        <button class="rock options_button" value=2><img src="images/icon-rock.svg" alt=""></button>
+        <button class="lizard options_button" value="3"><img src="images/icon-lizard.svg" alt=""></button>
+        <button class="spock options_button" value=4><img src="images/icon-spock.svg" alt=""></button>
+
+
+
+
+
+
+    </section>
+
+    <section class="game_board main_game">
+
+        <button class="paper options_button" value=1><img src="images/icon-paper.svg" alt=""class='images'></button>
+        <button class="scissors options_button" value=0><img src="images/icon-scissors.svg" alt="" class="images"></button>
+        <button class="rock options_button" value=2><img src="images/icon-rock.svg" alt=""></button>
+
+
+
+
+
+
+
+    </section>
+
+
+
+</div>
+
+
+<section class="winners_section visible">
+
+
+    <div class="results_container">
+        <section class="your_pick">
+            <button class="" value=2><img src="images/icon-rock.svg" class="your_image" alt=""></button>
+            
+            <h4>YOU PICKED</h4>
+
+            <div class="circles mine  visible">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>  
+
+        </section>
+
+
+        <section class="final_display">
+            
+            <h1 class="display">YOU LOSE</h1>
+            <div class="restart_button">
+                <a href="" class="restart">PLAY AGAIN</a>
+
+            </div>
+
+        </section>
+
+        
+
+        <section class="computer_pick">
+
+            <section>
+
+                <button class="" value=2><img src="images/icon-rock.svg" class="comp_image" alt=""></button>
+                <h4>THE MOUSE PICKED</h4>
+
+
+                <div class="circles comps visible">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div> 
+            </section>    
+
+                
+        
+        
+            
+        </section>
+
+    
+
+    </div>
+
+
+        <section class="final_display_mobile">
+                
+            <h1 class="display">YOU LOSE</h1>
+            <div class="restart_button">
+                <a href="" class="restart">PLAY AGAIN</a>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+<div class="modal_button_style">
+    <button class="modal_button" type="button">RULES</button>
+</div>
+
+
+
+<div class="modal_container">   
+
+    
+    <section class="modal visible">
+
+        <div class="rules_header">
+            <h1>RULES</h1>
+            <button class="modal_button button_display_small_none"><img src="images/icon-close.svg" alt=""></button>
+
+        </div>
+
+        <div class="container modal_image">
+            <img class="bonus visible" src="images/image-rules-bonus.svg" alt="">
+            <img class="main" src="images/image-rules.svg" alt="">
+        </div>
+
+        <button class="modal_button button_display_large_none"><img src="images/icon-close.svg" alt=""></button>
+
+    </section>
+
+</div>
+
+<script src="index.js"></script>
+
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">OPOKU WARE</a>.
+  </div>
+</body>
+</html>
